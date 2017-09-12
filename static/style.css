@@ -1,0 +1,32 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.choices{
+	margin-left: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.main{
+	text-align: center;
+}
+
+h2{
+	display: inline-block;
+	text-align: center;
+	margin-left: 1em;
+}
+
+form{
+	display: inline-block;
+	text-align: center;
+	margin-left: 3em;
+	margin-right: 1em;
+}
+
+h4{
+	margin-right: 1em;
+	margin-left: 1em;
+}

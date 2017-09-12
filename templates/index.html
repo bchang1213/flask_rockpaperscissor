@@ -3,20 +3,43 @@
 <head>
 	<meta charset="utf-8">
 	<title>Rock Paper Scissors</title>
+	<!-- linking a css style sheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-	<div>
+	<div class="scoreboard">
 		<h5>Win:{{wins}}</h5>
 		<h5>Lose:{{losses}}</h5>
 		<h5>Tie:{{ties}}</h5>
+
 	</div>
-	<h3>Rock</h3>
-	<h3>Paper</h3>
-	<h3>Scissor</h3>
-	<form>
-		<button name='rockbutton'>Rock</button>
-		<button name='paperbutton'>Paper</button>
-		<button name='scissorbutton'>Scissor</button>
-	</form>
+
+	<div class="main">
+		<div class="choices">
+			<h2>Rock</h2>
+			<h2>Paper</h2>
+			<h2>Scissor</h2>
+		</div>
+
+		{%if 'message' in session%}
+		
+		<h4>{{session['message']}}</h4>
+
+		{%endif%}
+
+		<form action='/shoot' method='post'>
+			<input type="hidden" name="input" value="rock">
+			<button name='rockbutton'>Rock</button>
+		</form>
+		<form action='/shoot' method='post'>
+			<input type="hidden" name="input" value="paper">
+			<button name='paperbutton'>Paper</button>
+		</form>
+		<form action='/shoot' method='post'>
+			<input type="hidden" name="input" value="scissors">
+			<button name='scissorbutton'>Scissor</button>
+		</form>
+	</div>
+
 </body>
 </html>
