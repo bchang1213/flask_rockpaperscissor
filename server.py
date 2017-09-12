@@ -39,19 +39,19 @@ def shoot():
 
 		#and if the computer chooses rock:
 		if session['computerchoice'] == 'rock':
-			session['message']='Its a draw'
+			session['message']='Its a draw. Computer chose: '+ session['computerchoice']
 			session['p_ties']+= 1
 		#draw
 
 		#or if the computer chooses paper:
 		elif session['computerchoice']=='paper':
-			session['message']='You lose'
+			session['message']='You lose. Computer chose: '+ session['computerchoice']
 			session['p_losses']+= 1
 		#lose
 
 		#or if the computer chooses scissors:
 		elif session['computerchoice']=='scissors':
-			session['message']='You win'
+			session['message']='You win. Computer chose: '+ session['computerchoice']
 			session['p_wins'] += 1
 		#win
 
@@ -60,19 +60,19 @@ def shoot():
 
 		#and if the computer chooses rock:
 		if session['computerchoice'] == 'rock':
-			session['message']='You lose'
+			session['message']='You lose. Computer chose: '+ session['computerchoice']
 			session['p_losses']+= 1
 		#lose
 
 		#or if the computer chooses paper:
 		elif session['computerchoice'] == 'paper':
-			session['message']='Its a draw'
+			session['message']='Its a draw. Computer chose: '+ session['computerchoice']
 			session['p_ties']+= 1
 		#draw
 
 		#or if the computer chooses scissors:
 		elif session['computerchoice'] == 'scissors':
-			session['message']='You win'
+			session['message']='You win. Computer chose: '+ session['computerchoice']
 			session['p_wins'] += 1
 		#win
 
@@ -81,19 +81,19 @@ def shoot():
 
 		#and the computer chooses rock:
 		if session['computerchoice'] == 'rock':
-			session['message']='You lose'
+			session['message']='You lose. Computer chose: '+ session['computerchoice']
 			session['p_losses']+= 1
 			#lose
 
 		#or if the computer chooses paper:
 		elif session['computerchoice'] == 'paper':
-			session['message']='You win'
+			session['message']='You win. Computer chose: '+ session['computerchoice']
 			session['p_wins'] += 1
 			#win
 
 		#or if the computer chooses scissors:
 		elif session['computerchoice'] == 'scissors':
-			session['message']='Its a draw'
+			session['message']='Its a draw. Computer chose: '+ session['computerchoice']
 			session['p_ties']+= 1
 			#draw
 	return redirect("/")
